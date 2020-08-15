@@ -1,7 +1,7 @@
 def key_mappings(value):
     key = dict()
     if value not in nums:
-        print('Input not valid')
+        print('Input not valid, start game again')
     else:
         key['1'] = (0, 0)
         key['2'] = (0, 1)
@@ -60,6 +60,8 @@ def draw_board(brd, pos=None, symbol=None):
             brd[x].pop(y)
             brd[x].insert(y, symbol)
             initialize_board(brd)
+        else:
+            print('Invalid Input, Start Game again')
     else:
         raise Exception('Coordinate does not exist')
 
